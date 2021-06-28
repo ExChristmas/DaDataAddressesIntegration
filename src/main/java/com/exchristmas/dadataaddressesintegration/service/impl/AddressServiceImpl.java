@@ -1,11 +1,13 @@
-package com.example.demo.service.impl;
+package com.exchristmas.dadataaddressesintegration.service.impl;
 
-import com.example.demo.model.Address;
-import com.example.demo.repos.AddressRepository;
-import com.example.demo.service.AddressService;
+import com.exchristmas.dadataaddressesintegration.model.Address;
+import com.exchristmas.dadataaddressesintegration.repos.AddressRepository;
+import com.exchristmas.dadataaddressesintegration.service.AddressService;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class AddressServiceImpl implements AddressService {
 
     private final AddressRepository addressRepository;

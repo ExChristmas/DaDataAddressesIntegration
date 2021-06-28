@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.exchristmas.dadataaddressesintegration.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

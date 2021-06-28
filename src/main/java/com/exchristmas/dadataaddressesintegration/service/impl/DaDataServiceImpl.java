@@ -1,9 +1,9 @@
-package com.example.demo.service.impl;
+package com.exchristmas.dadataaddressesintegration.service.impl;
 
-import com.example.demo.config.HeaderRequestInterceptor;
-import com.example.demo.model.*;
-import com.example.demo.repos.AddressRepository;
-import com.example.demo.service.DaDataService;
+import com.exchristmas.dadataaddressesintegration.config.HeaderRequestInterceptor;
+import com.exchristmas.dadataaddressesintegration.model.*;
+import com.exchristmas.dadataaddressesintegration.repos.AddressRepository;
+import com.exchristmas.dadataaddressesintegration.service.DaDataService;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.*;
@@ -11,11 +11,13 @@ import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.lang.NonNull;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
 import java.util.List;
 
+@Service
 public class DaDataServiceImpl implements DaDataService {
 
     private static final String URL_DADATA_API_CLEAN_ADDRESS = "https://cleaner.dadata.ru/api/v1/clean/address";

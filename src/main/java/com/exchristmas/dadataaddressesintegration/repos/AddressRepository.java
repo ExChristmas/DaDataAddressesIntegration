@@ -1,6 +1,6 @@
-package com.example.demo.repos;
+package com.exchristmas.dadataaddressesintegration.repos;
 
-import com.example.demo.model.Address;
+import com.exchristmas.dadataaddressesintegration.model.Address;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;

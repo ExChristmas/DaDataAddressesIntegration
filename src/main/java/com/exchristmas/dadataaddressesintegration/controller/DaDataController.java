@@ -1,9 +1,9 @@
-package com.example.demo.controller;
+package com.exchristmas.dadataaddressesintegration.controller;
 
-import com.example.demo.model.Address;
-import com.example.demo.model.AddressException;
-import com.example.demo.model.DaDataException;
-import com.example.demo.service.DaDataService;
+import com.exchristmas.dadataaddressesintegration.model.Address;
+import com.exchristmas.dadataaddressesintegration.model.AddressException;
+import com.exchristmas.dadataaddressesintegration.model.DaDataException;
+import com.exchristmas.dadataaddressesintegration.service.DaDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.lang.NonNull;

@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package com.exchristmas.dadataaddressesintegration.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpRequest;

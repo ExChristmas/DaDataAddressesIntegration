@@ -1,6 +1,6 @@
-package com.example.demo.service;
+package com.exchristmas.dadataaddressesintegration.service;
 
-import com.example.demo.model.Address;
+import com.exchristmas.dadataaddressesintegration.model.Address;
 import org.bson.types.ObjectId;
 
 public interface AddressService {

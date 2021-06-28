@@ -1,8 +1,8 @@
-package com.example.demo.service;
+package com.exchristmas.dadataaddressesintegration.service;
 
-import com.example.demo.model.Address;
-import com.example.demo.model.AddressException;
-import com.example.demo.model.DaDataException;
+import com.exchristmas.dadataaddressesintegration.model.Address;
+import com.exchristmas.dadataaddressesintegration.model.AddressException;
+import com.exchristmas.dadataaddressesintegration.model.DaDataException;
 
 public interface DaDataService {
 

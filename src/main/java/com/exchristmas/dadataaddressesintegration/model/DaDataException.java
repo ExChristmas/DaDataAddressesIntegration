@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.exchristmas.dadataaddressesintegration.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

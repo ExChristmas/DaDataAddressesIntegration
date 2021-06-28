@@ -1,7 +1,6 @@
-package com.example.demo.model;
+package com.exchristmas.dadataaddressesintegration.model;
 
 import lombok.AccessLevel;
-import lombok.Data;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 

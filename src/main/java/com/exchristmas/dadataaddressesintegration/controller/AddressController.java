@@ -1,8 +1,7 @@
-package com.example.demo.controller;
+package com.exchristmas.dadataaddressesintegration.controller;
 
-import com.example.demo.model.Address;
-import com.example.demo.service.AddressService;
-import com.example.demo.service.impl.AddressServiceImpl;
+import com.exchristmas.dadataaddressesintegration.model.Address;
+import com.exchristmas.dadataaddressesintegration.service.AddressService;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
