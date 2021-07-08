@@ -2,23 +2,18 @@ package com.exchristmas.dadataaddressesintegration.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.ToString;
-import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document(collection = "address")
 @Getter
-@EqualsAndHashCode
-@ToString(callSuper = true)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Address {
 
     @Id
-    private ObjectId id;
+    private String id;
 
     @Field("fullAddress")
     @JsonProperty("result")

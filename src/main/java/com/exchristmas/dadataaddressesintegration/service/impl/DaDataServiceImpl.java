@@ -4,12 +4,9 @@ import com.exchristmas.dadataaddressesintegration.config.HeaderRequestIntercepto
 import com.exchristmas.dadataaddressesintegration.model.*;
 import com.exchristmas.dadataaddressesintegration.repos.AddressRepository;
 import com.exchristmas.dadataaddressesintegration.service.DaDataService;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.*;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
-import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
-import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -58,14 +55,8 @@ public class DaDataServiceImpl implements DaDataService {
         List<ClientHttpRequestInterceptor> interceptors = Arrays.asList(
                 new HeaderRequestInterceptor(HttpHeaders.AUTHORIZATION, "Token " + API_KEY),
                 new HeaderRequestInterceptor("X-Secret", SECRET_KEY));
-        Jackson2ObjectMapperBuilder mapperBuilder = new Jackson2ObjectMapperBuilder();
-        mapperBuilder.featuresToEnable(DeserializationFeature.READ_UNKNOWN_ENUM_VALUES_USING_DEFAULT_VALUE,
-                DeserializationFeature.FAIL_ON_NUMBERS_FOR_ENUMS);
-        MappingJackson2HttpMessageConverter jsonMessageConverter =
-                new MappingJackson2HttpMessageConverter(mapperBuilder.build());
         return restTemplateBuilder.detectRequestFactory(true)
                 .interceptors(interceptors)
-                .messageConverters(jsonMessageConverter)
                 .build();
     }
 

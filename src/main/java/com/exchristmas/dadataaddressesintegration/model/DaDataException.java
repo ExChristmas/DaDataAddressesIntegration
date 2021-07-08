@@ -1,10 +1,10 @@
 package com.exchristmas.dadataaddressesintegration.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 @Getter
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class DaDataException extends Exception {
 
     private final DaDataErrorCode errorCode;
