@@ -18,9 +18,4 @@ public class RestServiceConfiguration {
         return new RestTemplateBuilder();
     }
 
-    @Bean
-    public RestTemplate restTemplate(RestTemplateBuilder builder) {
-        return builder.build();
-    }
-
 }
