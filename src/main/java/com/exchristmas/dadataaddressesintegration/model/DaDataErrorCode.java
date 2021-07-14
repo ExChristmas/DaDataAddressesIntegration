@@ -8,7 +8,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public enum DaDataErrorCode {
 
-    EMPTY_RESPONSE("Empty response from REST service");
+    EMPTY_RESPONSE("Empty response from REST service"),
+    BIG_LENGTH_REQUEST("Request string is too lang");
 
     private final String message;
 
