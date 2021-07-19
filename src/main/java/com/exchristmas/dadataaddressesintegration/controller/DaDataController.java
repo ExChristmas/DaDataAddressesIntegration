@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
+
 @RestController
 public class DaDataController {
 
@@ -22,12 +24,12 @@ public class DaDataController {
     }
 
     @PostMapping(value = "/")
-    public ResponseEntity<String> create(@RequestBody String source) {
+    public ResponseEntity<String> create(@RequestBody Map<String, String> query) {
         try {
-            Address AddressBeforeInsert = daDataService.requestToDaData(source);
+            Address AddressBeforeInsert = daDataService.requestToDaData(query.get("source"));
             return new ResponseEntity<>(AddressBeforeInsert.getId(),
                     new HttpHeaders(),
-                    HttpStatus.CREATED);
+                    HttpStatus.OK);
         } catch (DaDataException ex) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
