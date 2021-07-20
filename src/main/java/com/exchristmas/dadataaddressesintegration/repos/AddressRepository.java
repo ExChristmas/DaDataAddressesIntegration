@@ -9,7 +9,6 @@ import java.util.List;
 
 public interface AddressRepository extends MongoRepository<Address, ObjectId> {
 
-    @Query("{ 'fullAddress' : ?0 }")
-    List<Address> findByFullAddress(String fullAddress);
+    Address findByFullAddress(String fullAddress);
 
 }

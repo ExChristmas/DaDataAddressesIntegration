@@ -7,6 +7,8 @@ import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.Objects;
+
 @Service
 public class DaDataServiceImpl implements DaDataService {
 
@@ -48,10 +50,8 @@ public class DaDataServiceImpl implements DaDataService {
             throw new DaDataException(DaDataErrorCode.BIG_LENGTH_REQUEST);
         Address addressFromDaData = cleanAddress(source);
         if (addressFromDaData != null) {
-            if (!addressRepository.findByFullAddress(addressFromDaData.getFullAddress()).isEmpty())
-                return addressFromDaData;
-            else
-                return addressRepository.insert(addressFromDaData);
+            Address addressFromDb = addressRepository.findByFullAddress(addressFromDaData.getFullAddress());
+            return Objects.requireNonNullElseGet(addressFromDb, () -> addressRepository.insert(addressFromDaData));
         } else {
             throw new DaDataException(DaDataErrorCode.EMPTY_RESPONSE);
         }

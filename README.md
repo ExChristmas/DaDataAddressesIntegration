@@ -24,5 +24,4 @@ mvn exec:java -Dexec.mainClass="com.exchristmas.dadataaddressesintegration.DaDat
 <div>Results HTTP requests:</div>
 
 ![Alt-текст](https://github.com/ExChristmas/DaDataAddressesIntegration/blob/master/POST_REQUEST.png?raw=true)
-![Alt-текст](https://github.com/ExChristmas/DaDataAddressesIntegration/blob/master/REPEATED_POST_REQUEST.png?raw=true)
 ![Alt-текст](https://github.com/ExChristmas/DaDataAddressesIntegration/blob/master/GET_REQUEST.png?raw=true)
